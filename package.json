@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/w0whitaker/art/issues"
   },
-  "homepage": "https://github.com/w0whitaker/art#readme"
+  "homepage": "https://github.com/w0whitaker/art#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
 }
