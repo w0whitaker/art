@@ -1,0 +1,23 @@
+{
+  "name": "art-portfolio",
+  "version": "0.1.0",
+  "description": "The portfolio site for William Whitaker's art.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/w0whitaker/art.git"
+  },
+  "keywords": [
+    "art",
+    "portfolio"
+  ],
+  "author": "William Whitaker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w0whitaker/art/issues"
+  },
+  "homepage": "https://github.com/w0whitaker/art#readme"
+}
