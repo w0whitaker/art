@@ -3,3 +3,6 @@ node_modules/
 
 # eleventy output directory
 _site/
+
+# editor files
+*.code-workspace
