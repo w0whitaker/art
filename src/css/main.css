@@ -34,7 +34,7 @@ figcaption {
     padding-inline-start: 0.5rem;
     padding-inline-end: 1.5rem;
     padding-block-end: 1.5rem;
-    flex: 1 0 10rem;
+    flex: 1 1 10rem;
 }
 
 .title {
