@@ -1,13 +1,46 @@
+:root {
+    /* Colors */
+    --dark: #050505;
+    --mid-dark: #404040;
+    --mid-light: #e6e6e6;
+    --light: #fafafa;
+
+    /* Typography */
+    font-family: system-ui, sans-serif;
+
+    max-inline-size: 60ch;
+}
+
 main {
     width: 80%;
     margin: 0 auto;
 }
 
-p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp(3.13rem, calc(2.04rem + 5.44vw), 6.25rem);
+figure {
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 2rem;
+    background-color: var(--mid-dark);
 }
 
-svg {
-    width: 100%;
+figure img {
+    max-height: 250px;
+    max-inline-size: 100%;
+}
+
+figcaption {
+    color: var(--light);
+    align-self: flex-end;
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 1.5rem;
+    padding-block-end: 1.5rem;
+    flex: 1 0 10rem;
+}
+
+.title {
+    flex: 1 0 100%;
+}
+
+.credit {
+    font-style: italic;
 }

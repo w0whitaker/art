@@ -4,6 +4,8 @@ node_modules/
 # eleventy output directory
 _site/
 
+public/
+
 # editor files
 *.*-workspace
 *.*-project
