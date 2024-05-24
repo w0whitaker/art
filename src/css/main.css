@@ -1,0 +1,17 @@
+:root {
+    /* Colors */
+    --dark: #050505;
+    --mid-dark: #404040;
+    --mid-light: #e6e6e6;
+    --light: #fafafa;
+
+    /* Typography */
+    font-family: system-ui, sans-serif;
+
+    max-inline-size: 60ch;
+}
+
+figure img {
+    max-height: 250px;
+    max-inline-size: 100%;
+}
