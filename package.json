@@ -3,9 +3,11 @@
     "version": "0.1.0",
     "description": "The portfolio site for William Whitaker's art.",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "start": "npx @11ty/eleventy --serve --quiet",
         "dev:clean": "rm -rf _site",
+        "build": "npx @11ty/eleventy",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
