@@ -1,26 +1,33 @@
 {
-  "name": "art-portfolio",
-  "version": "0.1.0",
-  "description": "The portfolio site for William Whitaker's art.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/w0whitaker/art.git"
-  },
-  "keywords": [
-    "art",
-    "portfolio"
-  ],
-  "author": "William Whitaker",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/w0whitaker/art/issues"
-  },
-  "homepage": "https://github.com/w0whitaker/art#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.5"
-  }
+    "name": "art-portfolio",
+    "version": "0.1.0",
+    "description": "The portfolio site for William Whitaker's art.",
+    "exports": "./index.js",
+    "type": "module",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve --quiet",
+        "dev:clean": "rm -rf _site",
+        "build": "npx @11ty/eleventy",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/w0whitaker/art.git"
+    },
+    "keywords": [
+        "art",
+        "portfolio"
+    ],
+    "author": "William Whitaker",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/w0whitaker/art/issues"
+    },
+    "homepage": "https://github.com/w0whitaker/art#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "3.0.0-alpha.5"
+    },
+    "volta": {
+        "node": "20.14.0"
+    }
 }
