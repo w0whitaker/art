@@ -36,7 +36,6 @@ h1 {
 }
 
 main {
-    background: 50% / contain no-repeat url("../../public/slice.webp");
     justify-content: space-between;
 }
 
@@ -49,8 +48,8 @@ p {
 }
 
 .ar-titem {
-    --n: 16;
-    --d: 9;
+    --n: 1;
+    --d: 1;
     aspect-ratio: var(--n) / var(--d);
     overflow: hidden;
     display: flex;
@@ -58,12 +57,26 @@ p {
     align-items: center;
 }
 
+@media (width > 768px), (orientation: landscape) {
+    .ar-titem {
+        --n: 2.66;
+        --d: 1;
+    }
+}
+
+@media (aspect-ratio: 1.775 / 1) {
+    .ar-titem {
+        --n: 4;
+    }
+}
+
 .ar-titem > img,
 .ar-titem > video {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
-    object-position: 0% 50%;
+    transform: scale(1.5);
+    transform-origin: top center;
 }
 
 .cover {
