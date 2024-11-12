@@ -10,3 +10,6 @@ public/
 *.*-workspace
 *.*-project
 .idea/
+
+# design files
+*.fig
