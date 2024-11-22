@@ -7,7 +7,7 @@ export default function (eleventyConfig) {
             input: "content",
             output: "_site",
             data: "_data",
-            includes: "_includes",
+            includes: "../_includes", // relative to 'input' dir
         },
     };
 }
