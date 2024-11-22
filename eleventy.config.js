@@ -1,10 +1,10 @@
 export default function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("src/css/");
+    eleventyConfig.addPassthroughCopy("content/css/");
     eleventyConfig.addPassthroughCopy("public/");
 
     return {
         dir: {
-            input: "src",
+            input: "content",
             output: "_site",
             data: "_data",
             includes: "_includes",
