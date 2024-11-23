@@ -1,0 +1,8 @@
+<h1>Paintings-all</h1>
+<ul>
+  {% for painting in paintings %}
+    <li>
+      <a href="/paintings/{{ painting.title | slugify }}">{{ painting.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

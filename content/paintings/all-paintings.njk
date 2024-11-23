@@ -1,0 +1,26 @@
+---js
+// <script>
+const pagination = {
+  data: "paintings",
+  size: 1,
+  alias: "painting"
+}
+
+const eleventyExcludeFromCollections = true;
+
+const eleventyComputed = {
+  title: "{{ painting }}",
+  permalink: function (data) {
+    return `/paintings/${this.slugify(data.painting.title)}/`;
+  }
+};
+---
+<h1>{{ painting.title }}</h1>
+{% if painting.file %}
+  <img src="{{ painting.file }}" alt=" " />
+{% else %}
+  <p>no pitcher here</p>
+{% endif %}
+<p>
+  <a href="/paintings/">all</a> paintings
+</p>

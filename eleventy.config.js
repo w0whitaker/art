@@ -1,5 +1,4 @@
 export default function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("content/css/");
     eleventyConfig.addPassthroughCopy("public/");
 
     return {
