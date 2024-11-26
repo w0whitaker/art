@@ -6,6 +6,20 @@
     <title>William Whitaker | art</title>
   </head>
   <body>
+    <header>
+      <h1>
+        <a href="/">{{ metadata.title }}</a>
+      </h1>
+      <nav>
+        <ul>
+          {%- for entry in collections.all | eleventyNavigation -%}
+            <li>
+              <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </header>
     {{ content | safe }}
   </body>
 </html>
