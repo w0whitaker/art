@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
     return {
         dir: {
             input: "content",
-            output: process.env.OUTDIR,
+            output: process.env.OUTDIR || "_site",
             data: "../_data",
             includes: "../_includes", // relative to 'input' dir
         },
