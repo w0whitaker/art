@@ -1,3 +1,4 @@
+import "dotenv/config";
 import pluginNavigation from "@11ty/eleventy-navigation";
 
 export default function (eleventyConfig) {
@@ -9,7 +10,7 @@ export default function (eleventyConfig) {
     return {
         dir: {
             input: "content",
-            output: "_site",
+            output: process.env.OUTDIR,
             data: "../_data",
             includes: "../_includes", // relative to 'input' dir
         },

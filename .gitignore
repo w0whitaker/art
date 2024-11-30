@@ -10,6 +10,10 @@ public/
 *.*-workspace
 *.*-project
 .idea/
+.vscode/
 
 # design files
 *.fig
+
+# environment variables
+.env
