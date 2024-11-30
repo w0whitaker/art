@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css/");
     eleventyConfig.addPassthroughCopy("public/");
@@ -5,7 +7,7 @@ export default function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "_site",
+            output: process.env.OUTDIR,
             data: "_data",
             includes: "_includes",
         },
