@@ -1,4 +1,4 @@
 export default {
     displayName: "w. whitaker",
-    title: "Paintings.",
+    title: "paintings",
 };
