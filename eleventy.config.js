@@ -1,6 +1,7 @@
 import "dotenv/config";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import filtersPlugin from "./_config/filters.js";
 
 export default function (eleventyConfig) {
     // Plugins
@@ -15,6 +16,7 @@ export default function (eleventyConfig) {
             sizes: "auto",
         },
     });
+    eleventyConfig.addPlugin(filtersPlugin);
 
     // Filters
     eleventyConfig.addFilter("titleCase", function (str) {
