@@ -1,9 +1,20 @@
 import "dotenv/config";
 import pluginNavigation from "@11ty/eleventy-navigation";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(pluginNavigation);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        extensions: "html",
+        formats: ["webp", "jpg"],
+        widths: [200],
+        defaultAttributes: {
+            loading: "lazy",
+            decoding: "async",
+            sizes: "auto",
+        },
+    });
 
     eleventyConfig.addPassthroughCopy("public/");
 
