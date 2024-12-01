@@ -16,6 +16,13 @@ export default function (eleventyConfig) {
         },
     });
 
+    // Filters
+    eleventyConfig.addFilter("titleCase", function (str) {
+        let strOut =
+            str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() + ".";
+        return strOut;
+    });
+
     eleventyConfig.addPassthroughCopy("public/");
 
     return {
