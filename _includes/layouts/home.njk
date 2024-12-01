@@ -3,7 +3,6 @@ layout: "layouts/base.njk"
 ---
 <header>
   <h1>{{ metadata.title }}</h1>
-  <a href="/">{{ metadata.displayName }}</a>
   <nav>
     <ul>
       {%- for entry in collections.all | eleventyNavigation -%}
@@ -15,3 +14,7 @@ layout: "layouts/base.njk"
   </nav>
 </header>
 {{ content | safe }}
+<footer>
+  <p>{{ metadata.displayName }}</p>
+  <p>get in touch: william at williamwhitaker dot art</p>
+</footer>

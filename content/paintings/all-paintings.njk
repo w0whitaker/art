@@ -14,6 +14,8 @@ const eleventyComputed = {
     return `/paintings/${this.slugify(data.painting.title)}/`;
   }
 };
+
+const layout = "layouts/page.njk";
 ---
 <h1>{{ painting.title }}</h1>
 {% if painting.file %}
