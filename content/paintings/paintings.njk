@@ -8,6 +8,7 @@ layout: "layouts/page.njk"
   {% for painting in paintings %}
     <li>
       <a href="/paintings/{{ painting.title | slugify }}">{{ painting.title }}</a>
+      <img src="{{ painting.file }}" alt=" " eleventy:widths="100" />
     </li>
   {% endfor %}
 </ul>
