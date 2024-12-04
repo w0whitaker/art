@@ -19,7 +19,7 @@ const layout = "layouts/page.njk";
 ---
 <h1>{{ painting.title }}</h1>
 {% if painting.file %}
-  <img src="{{ painting.file }}" alt=" " />
+  <img src="{{ painting.filename }}" alt=" " />
 {% else %}
   <p>no pitcher here</p>
 {% endif %}
