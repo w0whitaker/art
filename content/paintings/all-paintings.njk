@@ -10,19 +10,26 @@ const eleventyExcludeFromCollections = true;
 
 const eleventyComputed = {
   title: "{{ painting }}",
-  permalink: function (data) {
-    return `/paintings/${this.slugify(data.painting.title)}/`;
-  }
+};
+
+const permalink = function (data) {
+  return `/paintings/${this.slugify(data.painting.title)}/`;
 };
 
 const layout = "layouts/page.njk";
 ---
 <h1>{{ painting.title }}</h1>
-{% if painting.file %}
-  <img src="{{ painting.filename }}" alt=" " />
+{% if painting.filename %}
+  <img src="{{ painting.filename }}" alt=" " eleventy:widths="100" />
 {% else %}
   <p>no pitcher here</p>
 {% endif %}
+{% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous}}">prev</a>
+{% endif %}
+{% if pagination.href.next %}
+<a href="{{ pagination.href.next }}">next</a>
+{% endif %}
 <p>
-  <a href="/paintings/">all</a> paintings
+<a href="/paintings/">all</a> paintings
 </p>

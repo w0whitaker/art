@@ -3,12 +3,11 @@ eleventyNavigation:
   key: all
 layout: "layouts/page.njk"
 ---
-
 <ul>
   {% for painting in paintings %}
     <li>
       <a href="/paintings/{{ painting.title | slugify }}">{{ painting.title }}</a>
-      <img src="{{ painting.file }}" alt=" " eleventy:widths="100" />
+      <img src="{{ painting.filename }}" alt=" " eleventy:widths="100" />
     </li>
   {% endfor %}
 </ul>
