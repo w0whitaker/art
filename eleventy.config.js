@@ -4,35 +4,34 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import filtersPlugin from "./_config/filters.js";
 
 export default function (eleventyConfig) {
-    // Plugins
-    eleventyConfig.addPlugin(pluginNavigation);
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-        extensions: "html",
-        formats: ["webp", "jpg"],
-        widths: [200, 600, 1000],
-        defaultAttributes: {
-            loading: "lazy",
-            decoding: "async",
-            sizes: "auto",
-        },
-    });
-    eleventyConfig.addPlugin(filtersPlugin);
+  // Plugins
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
+    formats: ["webp", "jpg"],
+    widths: [200, 600, 1000],
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+      sizes: "auto",
+    },
+  });
+  eleventyConfig.addPlugin(filtersPlugin);
 
-    // Filters
-    eleventyConfig.addFilter("titleCase", function (str) {
-        let strOut =
-            str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() + ".";
-        return strOut;
-    });
+  // Filters
+  eleventyConfig.addFilter("titleCase", function (str) {
+    let strOut = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() + ".";
+    return strOut;
+  });
 
-    eleventyConfig.addPassthroughCopy("public/");
+  eleventyConfig.addPassthroughCopy("public/");
 
-    return {
-        dir: {
-            input: "content",
-            output: process.env.OUTDIR || "_site",
-            data: "../_data",
-            includes: "../_includes", // relative to 'input' dir
-        },
-    };
+  return {
+    dir: {
+      input: "content",
+      output: process.env.OUTDIR || "_site",
+      data: "../_data",
+      includes: "../_includes", // relative to 'input' dir
+    },
+  };
 }

@@ -1,24 +1,14 @@
----js
-// <script>
-const pagination = {
-  data: "paintings",
-  size: 1,
-  alias: "painting"
-}
-
-const eleventyExcludeFromCollections = true;
-
-const eleventyComputed = {
-  title: "{{ painting }}",
-};
-
-const permalink = function (data) {
-  return `/paintings/${this.slugify(data.painting.title)}/`;
-};
-
-const layout = "layouts/page.njk";
 ---
-<h1>{{ painting.title }}</h1>
+pagination:
+  data: artworks.paintings
+  size: 1
+  alias: painting
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  pageTitle: "{{ painting.title }}"
+permalink: "/paintings/{{ painting.title | slugify }}/"
+layout: "layouts/page.njk"
+---
 {% if painting.filename %}
   <img src="{{ painting.filename }}" alt=" " eleventy:widths="100" />
 {% else %}

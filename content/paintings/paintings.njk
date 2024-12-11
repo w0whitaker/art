@@ -2,9 +2,11 @@
 eleventyNavigation: 
   key: all
 layout: "layouts/page.njk"
+pageTitle: "Paintings"
+permalink: "/paintings/"
 ---
 <ul>
-  {% for painting in paintings %}
+  {% for painting in artworks.paintings %}
     <li>
       <a href="/paintings/{{ painting.title | slugify }}">{{ painting.title }}</a>
       <img src="{{ painting.filename }}" alt=" " eleventy:widths="100" />

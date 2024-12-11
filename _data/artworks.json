@@ -1,0 +1,16 @@
+{
+  "paintings": [
+    {
+      "title": "ULG2005",
+      "filename": "../../public/ULG2005.webp"
+    },
+    {
+      "title": "ULG2006",
+      "filename": "../../public/ULG2006.webp"
+    },
+    {
+      "title": "ULG2007",
+      "filename": "../../public/ULG2007.webp"
+    }
+  ]
+}
